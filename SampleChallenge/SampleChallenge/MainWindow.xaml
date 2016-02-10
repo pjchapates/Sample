@@ -56,7 +56,9 @@
             <CheckBox x:Name="Checkbox3" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,0,0" Content="C" Checked="Checkbox3_Checked" Unchecked="Checkbox3_Unchecked" Tag="RTBVis" Click="check_Click"/>
         </Grid>
         <Grid x:Name="PictureGrid" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,25,25" Height="150" Width="150" Grid.Row="2" Grid.Column="1">
-            <Image x:Name="picture" HorizontalAlignment="Left" Height="150" Margin="0,0,0,0" VerticalAlignment="Top" Width="150" Source="Content/Picture.jpg" Stretch="UniformToFill"/>
+            
+            <Image x:Name="picture" HorizontalAlignment="Left" Height="150" Margin="0,0,0,0" VerticalAlignment="Top" Width="150" Source="Content/Picture.jpg" Stretch="UniformToFill" MouseLeftButtonDown="picture_MouseLeftButtonDown"/>
+            
         </Grid>
         <TextBlock x:Name="mousePos" HorizontalAlignment="Left" Margin="25,4,0,0" TextWrapping="Wrap" Text="(x,y)" VerticalAlignment="Top"/>
     </Grid>

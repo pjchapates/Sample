@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
 
 
 namespace SampleChallenge {
@@ -44,6 +45,11 @@ namespace SampleChallenge {
         }
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e) {
             //do something here if mediaelement and image didn't already do it
+            using(StreamWriter wr = new StreamWriter(@"log.txt",true)) {
+                string time = System.DateTime.Now.TimeOfDay.ToString();
+                wr.WriteLine("Program Closed Under Normal Conditions " + time);
+                wr.WriteLine();
+            }
         }
         #endregion
         #region Random Button Clicks
@@ -60,6 +66,9 @@ namespace SampleChallenge {
             //write press and time to rtf, scroll to bottom
             richTextBox.Document.Blocks.Add(new Paragraph(new Run(temp.Tag + " " + time)));
             richTextBox.ScrollToEnd();
+            using (StreamWriter wr = new StreamWriter(@"log.txt",true)) {
+                wr.WriteLine(temp.Tag + " " + time);
+            }
         }
         #endregion
         #region Media Play
@@ -81,6 +90,9 @@ namespace SampleChallenge {
                 string time = System.DateTime.Now.TimeOfDay.ToString();
                 richTextBox.Document.Blocks.Add(new Paragraph(new Run("Video Play " + time)));
                 richTextBox.ScrollToEnd();
+                using (StreamWriter wr = new StreamWriter(@"log.txt", true)) {
+                    wr.WriteLine("Video Play " + time);
+                }
             }
             else { //pause button
                 //pause video
@@ -90,6 +102,9 @@ namespace SampleChallenge {
                 string time = System.DateTime.Now.TimeOfDay.ToString();
                 richTextBox.Document.Blocks.Add(new Paragraph(new Run("Video Pause " + time)));
                 richTextBox.ScrollToEnd();
+                using (StreamWriter wr = new StreamWriter(@"log.txt", true)) {
+                    wr.WriteLine("Video Pause " + time);
+                }
             }
         }
         /// <summary>
@@ -109,6 +124,9 @@ namespace SampleChallenge {
                 string log = "Video Position Set: " + video.Position.TotalSeconds;
                 richTextBox.Document.Blocks.Add(new Paragraph(new Run(log)));
                 richTextBox.ScrollToEnd();
+                using (StreamWriter wr = new StreamWriter(@"log.txt", true)) {
+                    wr.WriteLine("Video Position Set: " + video.Position.TotalSeconds);
+                }
             }
         }
         /// <summary>
@@ -175,7 +193,7 @@ namespace SampleChallenge {
             //logs data for pressing down on the mouse
             Point tempPos = Mouse.GetPosition(Application.Current.MainWindow); //gets mouse pos
             string time = System.DateTime.Now.TimeOfDay.ToString(); //gets time
-            string mousepos = "Mouse Down. (x,y): (" + tempPos.ToString() + ") Time: " + time;
+            string mousepos = "Mouse Down: (" + tempPos.ToString() + ") Time: " + time;
             richTextBox.Document.Blocks.Add(new Paragraph(new Run(mousepos))); //logs
             richTextBox.ScrollToEnd();
         }
@@ -184,6 +202,34 @@ namespace SampleChallenge {
             Point tempPos = Mouse.GetPosition(Application.Current.MainWindow);
             string mousepos = "Mouse Pos: (" + tempPos.ToString() + ")";
             mousePos.Text = mousepos;
+        }
+        #endregion
+        #region Changing Media Sources
+        /// <summary>
+        /// Occurs when the image is pressed,
+        /// used to open file dialog and change the source image
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void picture_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) {
+            Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
+            // Default file name
+            dlg.FileName = "Image";
+            //Default file exten. 
+            dlg.DefaultExt = ".jpg";
+            //Filters by file type
+            dlg.Filter = "Image Files (.jpg)|*.jpg";
+            Nullable<bool> result = dlg.ShowDialog();
+            //changes source when the dialog is complete
+            if (result == true) {
+                // Open document
+                string filename = dlg.FileName;
+                BitmapImage newSource = new BitmapImage();
+                newSource.BeginInit();
+                newSource.UriSource = new Uri(filename, UriKind.Absolute);
+                newSource.EndInit();
+                picture.Source = newSource;
+            }
         }
         #endregion
     }
