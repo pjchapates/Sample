@@ -14,3 +14,6 @@ c:\users\pj\documents\visual studio 2015\Projects\SampleChallenge\SampleChalleng
 c:\users\pj\documents\visual studio 2015\Projects\SampleChallenge\SampleChallenge\obj\Debug\SampleChallenge_Content.g.cs
 C:\Users\PJ\Documents\Visual Studio 2015\Projects\SampleChallenge\SampleChallenge\bin\Debug\Content\Video.mp4
 C:\Users\PJ\Documents\Visual Studio 2015\Projects\SampleChallenge\SampleChallenge\obj\Debug\SampleChallenge.csprojResolveAssemblyReference.cache
+C:\Users\PJ\Documents\GitHub\Sample\SampleChallenge\SampleChallenge\bin\Debug\SampleChallenge.exe.config
+C:\Users\PJ\Documents\GitHub\Sample\SampleChallenge\SampleChallenge\obj\Debug\SampleChallenge.exe
+C:\Users\PJ\Documents\GitHub\Sample\SampleChallenge\SampleChallenge\obj\Debug\SampleChallenge.pdb
