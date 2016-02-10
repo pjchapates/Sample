@@ -1,0 +1,16 @@
+c:\users\pj\documents\visual studio 2015\Projects\SampleChallenge\SampleChallenge\bin\Debug\SampleChallenge.exe.config
+c:\users\pj\documents\visual studio 2015\Projects\SampleChallenge\SampleChallenge\bin\Debug\SampleChallenge.exe
+c:\users\pj\documents\visual studio 2015\Projects\SampleChallenge\SampleChallenge\bin\Debug\SampleChallenge.pdb
+c:\users\pj\documents\visual studio 2015\Projects\SampleChallenge\SampleChallenge\obj\Debug\MainWindow.g.cs
+c:\users\pj\documents\visual studio 2015\Projects\SampleChallenge\SampleChallenge\obj\Debug\App.g.cs
+c:\users\pj\documents\visual studio 2015\Projects\SampleChallenge\SampleChallenge\obj\Debug\SampleChallenge_MarkupCompile.cache
+c:\users\pj\documents\visual studio 2015\Projects\SampleChallenge\SampleChallenge\obj\Debug\SampleChallenge_MarkupCompile.lref
+c:\users\pj\documents\visual studio 2015\Projects\SampleChallenge\SampleChallenge\obj\Debug\MainWindow.baml
+c:\users\pj\documents\visual studio 2015\Projects\SampleChallenge\SampleChallenge\obj\Debug\SampleChallenge.g.resources
+c:\users\pj\documents\visual studio 2015\Projects\SampleChallenge\SampleChallenge\obj\Debug\SampleChallenge.Properties.Resources.resources
+c:\users\pj\documents\visual studio 2015\Projects\SampleChallenge\SampleChallenge\obj\Debug\SampleChallenge.csproj.GenerateResource.Cache
+c:\users\pj\documents\visual studio 2015\Projects\SampleChallenge\SampleChallenge\obj\Debug\SampleChallenge.exe
+c:\users\pj\documents\visual studio 2015\Projects\SampleChallenge\SampleChallenge\obj\Debug\SampleChallenge.pdb
+c:\users\pj\documents\visual studio 2015\Projects\SampleChallenge\SampleChallenge\obj\Debug\SampleChallenge_Content.g.cs
+C:\Users\PJ\Documents\Visual Studio 2015\Projects\SampleChallenge\SampleChallenge\bin\Debug\Content\Video.mp4
+C:\Users\PJ\Documents\Visual Studio 2015\Projects\SampleChallenge\SampleChallenge\obj\Debug\SampleChallenge.csprojResolveAssemblyReference.cache
